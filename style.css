@@ -1,0 +1,77 @@
+/* Base y accesibilidad */ 
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: #f5f5f5;
+color: #333;
+line-height: 1.6;
+}
+
+.skip-link {
+position: absolute;
+left: -9999px;
+top: auto;
+background: #0ea5e9;
+color: #00243a;
+padding: .5rem .75rem;
+border-radius: 8px;
+z-index: 1000;
+}
+.skip-link:focus { left: .75rem; top: .75rem; outline: 3px solid #22d3ee; }
+
+/* Header y navegación */
+header { background: #222; color: white; padding: 1rem; position: sticky; top: 0; z-index: 10; }
+.nav { display: flex; justify-content: space-between; align-items: center; max-width: 1000px; margin: 0 auto; }
+.brand span { color: #0ea5e9; font-weight: 700; }
+nav ul { list-style: none; display: none; gap: 1rem; margin: 0; padding: 0; }
+nav a { color: white; text-decoration: none; }
+.menu-btn { background: transparent; border: 1px solid #555; color: white; padding: .4rem .6rem; border-radius: 8px; }
+
+/* Layout principal */
+main { max-width: 1000px; margin: 0 auto; padding: 1rem; }
+
+.hero {
+display: grid;
+gap: 1rem;
+padding: 2rem 1rem;
+background: white;
+border-radius: 12px;
+}
+.hero h1 { margin: 0; }
+.subtitle { color: #555; }
+.actions { margin-top: 1rem; display: flex; gap: .6rem; flex-wrap: wrap; }
+.btn { padding: .5rem 1rem; border-radius: 999px; text-decoration: none; font-weight: 600; }
+.btn-primary { background: #0ea5e9; color: white; }
+.btn-ghost { border: 1px solid #0ea5e9; color: #0ea5e9; background: transparent; }
+.avatar { width: 150px; height: 150px; border-radius: 50%; border: 3px solid #93c5fd; object-fit: cover; }
+
+/* Secciones */
+.card {
+background: white;
+padding: 1rem;
+margin: 1rem 0;
+border-radius: 12px;
+border: 1px solid #e5e7eb;
+}
+.badges { display: flex; flex-wrap: wrap; gap: .5rem; }
+.badge { background: #e0f2fe; padding: .3rem .6rem; border-radius: 12px; font-size: .9rem; }
+.project a { color: #0ea5e9; }
+
+/* Contacto */
+.contact-list { list-style: none; padding: 0; display: grid; gap: .4rem; }
+.contact-list a { color: #0ea5e9; text-decoration: none; }
+
+/* Footer */
+footer { text-align: center; margin-top: 2rem; padding: 1rem; font-size: .9rem; color: #555; }
+
+/* Responsive */
+@media (min-width: 760px) {
+nav ul { display: flex; }
+.menu-btn { display: none; }
+
+.hero {
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+    padding: 2rem;
+    }
+}
